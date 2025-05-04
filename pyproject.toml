@@ -1,0 +1,35 @@
+[project]
+name = "launch-library-mcp"
+version = "0.6.2"
+description = ""
+authors = [{ name = "medaka", email = "36759068+medaka0213@users.noreply.github.com" }]
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "click>=8.1.8",
+    "fastmcp>=2.2.7",
+    "pydantic>=2.11.4",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+launch_library_mcp = "launch_library_mcp._cli:cli"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.4.0,<8",
+    "pytest-cov>=4.1.0,<5",
+    "pdoc3>=0.11.1,<0.12",
+    "flake8>=6.1.0",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["launch_library_mcp"]
+
+[tool.hatch.build.targets.wheel]
+include = ["launch_library_mcp"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
