@@ -21,7 +21,7 @@ See also: https://modelcontextprotocol.io/quickstart/user
             "command": "uv",
             "args": [
                 "--directory",
-                "/ABSOLUTE/PATH/TO/PARENT/FOLDER/weather",
+                "/ABSOLUTE/PATH/TO/PARENT/FOLDER",
                 "run",
                 "launch_library_mcp", "run-llv2"
             ]
